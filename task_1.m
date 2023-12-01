@@ -76,7 +76,7 @@ function [path] = task_1(map, startPoint, stopPoint)
         path = [current_node; path];
         current_node = [path_map(current_node(1), current_node(2), 2), path_map(current_node(1), current_node(2), 3)];
     end
-    % path = [startPoint; path];
+    path = [startPoint; path];
 
 end
 
