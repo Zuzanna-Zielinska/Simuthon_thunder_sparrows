@@ -1,12 +1,19 @@
 
-find(out.check.Data(100:end, 1) > 1.0, 1);
-out.check.Data(85973, 1);
-find(out.check.Data(100:end, 1) > 2.0, 1);
-out.check.Data(172015, 1);
 
-maxim = max(out.check.Data(85973 : 172015, 2));
-minim = min(out.check.Data(85973 : 172015, 2));
+time_min = 1.5;
+time_max = 3.5;
+d_time = 5e-5;
+
+idx_min = (time_min/d_time)+5;
+idx_max = (time_max/d_time)+5;
+
+
+maxim = max(out.check.Data(idx_min : idx_max, 2))
+minim = min(out.check.Data(idx_min : idx_max, 2))
 
 accur = (maxim - minim) / maxim
 
 % start
+
+
+
